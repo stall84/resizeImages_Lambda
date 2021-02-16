@@ -29,7 +29,6 @@ async function* imageProcessingGenerator(records) {
             Bucket: destinationBucket,
             Key: resizedFileName,
             Body: resizedBuffer,
-            ContentType: 'image/jpeg'
         };
  
         await s3.putObject(params).promise();
